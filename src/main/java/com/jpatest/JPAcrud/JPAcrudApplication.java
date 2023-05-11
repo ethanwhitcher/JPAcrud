@@ -13,15 +13,15 @@ public class JPAcrudApplication {
 	}
 
 	// spring boot runs all CommandLineRunner beans once application context is loaded
-//	@Bean
-//	CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
-//		return args -> {
-//			Student ben = new Student(
-//					"Ben", "Franklin", "ben.franklin@gmail.com", 51
-//			);
-//			studentRepository.save(ben);
-//		};
-//	}
+	@Bean
+	CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
+		return args -> {
+			Student john = new Student(
+					"john", "doe", "johndoe@gmail.com", 50
+			);
+			studentRepository.save(john);
+		};
+	}
 
 
 }
